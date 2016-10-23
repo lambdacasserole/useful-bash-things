@@ -1,6 +1,8 @@
 # Useful Bash Things
 A collection of Bash scripts and snippets that I find useful.
 
+![Logo](logo.png)
+
 ## /home/*
 These files contain snippets I find useful to include in any of the files under a users home (`~`) directory on Linux. They're named with the convention `n-f.sh` where:
 
