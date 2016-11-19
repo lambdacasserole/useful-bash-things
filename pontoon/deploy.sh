@@ -4,7 +4,7 @@
 export HOME="/var/www"
 
 # Directory path of this script.
-CUR_PATH="/var/www/html"
+CUR_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Change to this directory.
 cd "$CUR_PATH"
