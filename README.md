@@ -6,7 +6,7 @@ A collection of Bash scripts and snippets that I find useful.
 ## /home/*
 These files contain snippets I find useful to include in any of the files under a users home (`~`) directory on Linux. They're named with the convention `n-f.sh` where:
 
-* `n` is the name of the file the snippet should be included in, exclusing any leading dots
+* `n` is the name of the file the snippet should be included in, excluding any leading dots
 * `f` is the piece of functionality the snippet provides, with words separated by hashes
 
 ## /pontoon/*
