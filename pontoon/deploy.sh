@@ -26,7 +26,7 @@ then
 	php composer.phar install
 	let x=$x+$?
 else
-	echo "Not a Composer project, skipping installation...\n"
+	echo "Not a Composer project, skipping installation..."
 fi
 
 # Install NPM packages.
@@ -35,7 +35,7 @@ then
 	npm install
 	let x=$x+$?
 else
-	echo "Not an NPM project, skipping installation...\n"
+	echo "Not an NPM project, skipping installation..."
 fi
 
 # Install Bower packages.
@@ -44,7 +44,7 @@ then
 	./node_modules/.bin/bower install
 	let x=$x+$?
 else
-	echo "Not a Bower project, skipping installation...\n"
+	echo "Not a Bower project, skipping installation..."
 fi
 
 # Perform Gulp tasks.
@@ -53,7 +53,7 @@ then
 	./node_modules/.bin/gulp
 	let x=$x+$?
 else
-	echo "No gulpfile detected, skipping Gulp build...\n"
+	echo "No gulpfile detected, skipping Gulp build..."
 fi
 
 # If all were successful, echo 0 otherwise echo 1.
