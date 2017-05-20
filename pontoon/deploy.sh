@@ -17,20 +17,44 @@ git pull
 let x=$x+$?
 
 # Install Composer packages.
-php composer.phar install
-let x=$x+$?
+if [ -e ./composer.json ]
+then
+    if [ ! -e ./composer.phar ]
+    then
+        wget https://getcomposer.org/composer.phar
+    fi
+    php composer.phar install
+    let x=$x+$?
+else
+    echo "Not a Composer project, skipping installation...\n"
+fi
 
 # Install NPM packages.
-npm install
-let x=$x+$?
+if [ -e ./packages.json ]
+then
+    npm install
+    let x=$x+$?
+else
+    echo "Not an NPM project, skipping installation...\n"
+fi
 
 # Install Bower packages.
-./node_modules/.bin/bower install
-let x=$x+$?
+if [ -e ./bower.json ]
+then
+    ./node_modules/.bin/bower install
+    let x=$x+$?
+else
+    echo "Not a Bower project, skipping installation...\n"
+fi
 
 # Perform Gulp tasks.
-./node_modules/.bin/gulp
-let x=$x+$?
+if [ -e ./gulpfile.js ]
+then
+    ./node_modules/.bin/gulp
+    let x=$x+$?
+else
+    echo "No gulpfile detected, skipping Gulp build...\n"
+fi
 
 # If all were successful, echo 0 otherwise echo 1.
 if [ $x = 0 ]; then
