@@ -23,6 +23,7 @@ then
 	then
 		wget https://getcomposer.org/composer.phar
 	fi
+	php composer.phar self-update
 	php composer.phar install
 	let x=$x+$?
 else
