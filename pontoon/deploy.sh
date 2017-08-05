@@ -31,7 +31,7 @@ else
 fi
 
 # Install NPM packages.
-if [ -e ./packages.json ]
+if [ -e ./package.json ]
 then
 	npm install
 	let x=$x+$?
